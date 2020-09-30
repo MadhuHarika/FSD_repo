@@ -13,11 +13,21 @@
 
 // sync module using call back function.
 
-let fs=require('fs');
-let file_detailsSync=fs.readdir('../',function (err,data) {
-    if(err)
-    {
-        console.log('error data');
+// let fs=require('fs');
+// let file_detailsSync=fs.readdir('../',function (err,data) {
+//     if(err)
+//     {
+//         console.log('error data');
+//     }
+//     console.log(data);
+// });
+
+// using lambda function
+
+let fil=require('fs');
+fil.readdir('.../',(err,data)=>{
+    if(err) {
+        console.log(`Input is not proper`);
     }
     console.log(data);
-});
+})
