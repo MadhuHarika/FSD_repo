@@ -1,6 +1,16 @@
 function firstname(fname)
 {
-    return fname;
+    if(fname=="")
+    {
+        return `input can't be empty!!`
+    }
+    else if(typeof fname === 'string' || fname instanceof String) {
+        return `perfect one`;
+    }
+    else
+    {
+        return `can't be a number`;
+    }
 }
 
 module.exports.fname=firstname;
@@ -8,8 +18,16 @@ module.exports.fname=firstname;
 
 function lastname(lname)
 {
-    return lname;
+    try{
+    if (!isNaN(lname))
+        throw err;
+    return 'your last name is: '+lname;
+} catch(err)
+{
+    return'Please do not put numbers';
 }
+}
+
 
 module.exports.lname=lastname;
 
