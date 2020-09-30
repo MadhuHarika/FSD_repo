@@ -1,6 +1,6 @@
 function firstname(fname)
 {
-    return `My firstname is:`+fname;
+    return fname;
 }
 
 module.exports.fname=firstname;
@@ -8,7 +8,7 @@ module.exports.fname=firstname;
 
 function lastname(lname)
 {
-    return `My lastname is:` +lname;
+    return lname;
 }
 
 module.exports.lname=lastname;
