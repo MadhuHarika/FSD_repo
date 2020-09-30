@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c20ccc1-1e6c-4728-bd78-95e02c9523c2" name="Default Changelist" comment="event handler test">
-      <change afterPath="$PROJECT_DIR$/eventhandler_addition.js" afterDir="false" />
+    <list default="true" id="1c20ccc1-1e6c-4728-bd78-95e02c9523c2" name="Default Changelist" comment="event handler test for addition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eventhandler_addition.js" beforeDir="false" afterPath="$PROJECT_DIR$/eventhandler_addition.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601443612662</updated>
       <workItem from="1601443613722" duration="12376000" />
-      <workItem from="1601462974335" duration="4793000" />
+      <workItem from="1601462974335" duration="5695000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1601443842998</created>
@@ -163,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601466847346</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="event handler test for addition">
+      <created>1601468283698</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1601468283698</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,13 +200,14 @@
     <MESSAGE value="validation of path" />
     <MESSAGE value="check the OS related info" />
     <MESSAGE value="event handler test" />
-    <option name="LAST_COMMIT_MESSAGE" value="event handler test" />
+    <MESSAGE value="event handler test for addition" />
+    <option name="LAST_COMMIT_MESSAGE" value="event handler test for addition" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601466866723">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601468292017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601466866723" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601468292017" />
     <state x="570" y="319" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1601445963820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
