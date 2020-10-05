@@ -1,8 +1,8 @@
 const http=require('http');
 const customers=[
-    {id:1,name:'John'},
-    {id:2,name:'Marry'},
-    {id:3,name:'Jane'},
+    {id:1,name:'Madhu'},
+    {id:2,name:'Harika'},
+    {id:3,name:'JaNandipatine'},
 ]
 
 const server=http.createServer(function(req,res){
