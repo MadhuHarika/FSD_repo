@@ -51,6 +51,29 @@ app.post('/api/review', (req, res) => {
     res.send(rev);
 });
 
+app.put('/api/review/:id', (req, res) => {
+    const rev = review.find(c => c.id === parseInt(req.params.id));
+    if (!rev) return res.status(404).send('The movie with the given ID was not found.');
+
+    const {error} = validateMovies(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+    console.log(rev.name);
+    rev.name = req.body.name;
+    console.log(rev.name);
+    res.send(rev);
+});
+
+
+app.delete('/api/review/:id',(req,res)=>{
+	const rev=review.find(c=>c.id===parseInt(req.params.id));
+	if(!rev){
+		 return res.status(404).send('The movie with the given ID was not found.');
+    }
+    const index=review.indexOf(rev);
+    review.splice(index, 1);
+    res.send(rev);
+});
+
 let port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log('server started listening on port number', port);
