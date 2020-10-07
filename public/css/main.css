@@ -1,0 +1,20 @@
+.heading{
+    background-color:#F3340B;
+    text-align: center;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+}
+.demo{
+    list-style-type: none;
+}
+.demo li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+
+}
+.body{
+
+    color: blue;
+}
