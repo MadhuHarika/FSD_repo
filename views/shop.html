@@ -3,19 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
+    <style type="text/css">
+.heading{
+    background-color:#F3340B;
+    text-align: center;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+    }
+.demo{
+    list-style-type: none;
+}
+.demo li{
+display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+
+}
+.body{
+
+    color: blue;
+}
+    </style>
 </head>
 <body>
-<nav>
-    <ul>
-        <li>
-            <a href="/">shop</a>
-        </li>
-        <li>
-            <a href="/admin/add-product">Add product</a>
-        </li>
-    </ul>
-</nav>
-<h1>My Products</h1>
-<p>List of all the products</p>
+<div class="heading">
+    <nav>
+        <ul class="demo">
+            <li>
+                <a href="/">shop</a>
+            </li>
+            <li>
+                <a href="/admin/add-product">Add product</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="body">
+<h1>Welcome to the shop page!!! here we have the list of all the products that you want.</h1>
+<p>Please click on Shop to fetch the products</p>
+    <p>Please click on Add products to add new products</p>
+</div>
 </body>
 </html>
