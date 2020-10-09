@@ -55,12 +55,21 @@ updateCourse('5f7ff23386ef4d0d48d068fc').then(()=>{
 
 //update for a single data
 
-async function updateCourse()
+// async function updateCourse()
+// {
+//     const result=await Course.update({author:'Mosh'},{$set:{name:'Learning cricket'}});
+//     console.log('course update success');
+// }
+
+
+// update the first data by using find by id
+
+async function updateCourse(id)
 {
-    const result=await Course.update({author:'Mosh'},{$set:{name:'Learning cricket'}});
-    console.log('course update success');
+let result=await Course.findByIdAndUpdate({_id:id},{$set:{name:'Learning C',author:'Balaguruswamy'}});
+console.log(result);
 }
 
-updateCourse().then(()=>{
+updateCourse('5f7ff23386ef4d0d48d068fc').then(()=>{
     console.log('success');
 })
