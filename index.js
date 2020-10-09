@@ -19,8 +19,8 @@ async function getCourses(){
          .find({isPublished: true})
         // .and([{name: {$regex: /by/}}]) //regular expression match which contain by .
         // .and({price: { $gte: 12 }})
-        .or([{author:/M.*/i}]) // match a string which is starting with M.
-        //.and([{price: {gte : 15}}])
+        //.or([{author:/M.*/i}]) // match a string which is starting with M.
+        .and([{price: {$gte : 15}}])
         // .and ([{name:/.*by.*/i}])
         // .and ([{author:/M.*/i}])
         .sort('-price')
