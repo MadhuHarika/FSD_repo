@@ -66,7 +66,7 @@ updateCourse('5f7ff23386ef4d0d48d068fc').then(()=>{
 
 async function updateCourse(id)
 {
-let result=await Course.findByIdAndUpdate({_id:id},{$set:{name:'Learning C',author:'Balaguruswamy'}});
+let result=await Course.findByIdAndUpdate({_id:id},{$set:{name:'Learning C',author:'Mr.Balaguruswamy'}},{new:true});
 console.log(result);
 }
 
