@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71134a3a-18f5-4c69-a451-52c07cc81738" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/impl-ejs-seperate-head-body-include.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/forms.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/first.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sky.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/shop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/path.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/add-product.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/errorpage.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/includes/end.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/includes/head.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/includes/nav.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/shop.ejs" afterDir="false" />
+    <list default="true" id="71134a3a-18f5-4c69-a451-52c07cc81738" name="Default Changelist" comment="impl-seperate-head-body-ejs">
+      <change afterPath="$PROJECT_DIR$/controllers/error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/shop.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iqxIWxqE7TMuS5ZJvF1liFdP1f" />
@@ -75,11 +62,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602648844144</updated>
-      <workItem from="1602648845304" duration="3499000" />
+      <workItem from="1602648845304" duration="5380000" />
     </task>
+    <task id="LOCAL-00001" summary="impl-seperate-head-body-ejs-">
+      <created>1602652440045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602652440045</updated>
+    </task>
+    <task id="LOCAL-00002" summary="impl-seperate-head-body-ejs">
+      <created>1602652457486</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602652457486</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="impl-seperate-head-body-ejs-" />
+    <MESSAGE value="impl-seperate-head-body-ejs" />
+    <option name="LAST_COMMIT_MESSAGE" value="impl-seperate-head-body-ejs" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="912" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602659487822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="912" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602659487822" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602652513747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602652513747" />
+    <state x="570" y="319" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602652501388">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="570" y="319" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602652501388" />
   </component>
 </project>
