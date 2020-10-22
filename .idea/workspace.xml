@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b7abed78-8c3f-4e17-b654-08c73be301f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jDdIdSi2KNd5XySZXjQkBl0IBs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MadhuNandipati\WebstormProjects\typescript-ex\Typescripts" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7abed78-8c3f-4e17-b654-08c73be301f5" name="Default Changelist" comment="" />
+      <created>1603342517628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603342517628</updated>
+      <workItem from="1603342518917" duration="17855000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Typescripts/app.js" />
+        <option value="$PROJECT_DIR$/Typescripts/avgofarray.js" />
+        <option value="$PROJECT_DIR$/Typescripts/sports.js" />
+        <option value="$PROJECT_DIR$/Typescripts/todo.js" />
+        <option value="$PROJECT_DIR$/Typescripts/Employee.js" />
+        <option value="$PROJECT_DIR$/Typescripts/Test.js" />
+        <option value="$PROJECT_DIR$/Typescripts/Bird.js" />
+        <option value="$PROJECT_DIR$/Typescripts/Flyer.js" />
+        <option value="$PROJECT_DIR$/Typescripts/SuperMan.js" />
+        <option value="$PROJECT_DIR$/Typescript3/GolfCoach.js" />
+        <option value="$PROJECT_DIR$/Typescript3/Coach.js" />
+        <option value="$PROJECT_DIR$/Typescript3/FortuneService.js" />
+        <option value="$PROJECT_DIR$/Typescript3/app.js" />
+        <option value="$PROJECT_DIR$/Typescript3/CricketCoach.js" />
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603368788351">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="522" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1603368788351" />
+    <state x="844" y="144" key="#com.intellij.ide.util.MemberChooser" timestamp="1603364199402">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="844" y="144" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603364199402" />
+    <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603359284661">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="290" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1603359284661" />
+  </component>
+</project>
