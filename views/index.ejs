@@ -2,9 +2,11 @@
 
   </head>
 <script type="text/javascript" src="/javascripts/common.js"></script>
+<link rel='stylesheet' href='/stylesheets/img.css' />
+
   <body class="container">
   <%- include('includes/nav.ejs') %>
-  <MARQUEE STYLE="width:1000px" SCROLLDELAY="120">WELCOME to the page!!!</MARQUEE>
+  <MARQUEE STYLE="width:1000px" SCROLLDELAY="120"><h3>Good to see you again!!!</h3></MARQUEE>
   <p><%= data.token %></p>
     <% if (data.isAuthenticated) { %>
   <% /*if (!!data.customer) { */%>
@@ -12,18 +14,16 @@
       <img src="data:image/<%=data.customer.profilepic.contentType%>;base64,
                      <%=data.customer.profilepic.imgdata.toString('base64')%>" width="300" height="250">
       <div>
-        <p><%= data.customer.firstname %></p>
-        <p><%= data.customer.lastname %></p>
+        <p><%= data.customer.firstname %>     <%= data.customer.lastname %></p>
 
 
 
+        
+        <button onClick="getFollowers('<%=data.customer._id%>')"><img class="img1" src="../images/retrieve_followers.JPG" alt="can't load this time"> <div>Get Followers</div> </button>
 
-        <button onClick="getFollowers('<%=data.customer._id%>')" >Get Followers </button>
-
-        <button onClick="addFollowers('<%=data.customer._id%>','5f898bf42c310943f8f44e3f')" >Add Followers </button>
-        <!--<button onClick="getUsers()" >All Users </button>-->
-       <!-- <button onClick="addFollowers(<% if (data.token) { %>'jwt <%= data.token %>'<% }%>)">Add Followers </button>-->
-        <button onClick="deleteFollowers('<%=data.customer._id%>')">Delete Followers </button>
+        <button onClick="addFollowers('<%=data.customer._id%>','5f898bf42c310943f8f44eggf')" ><img class="img1" src="../images/add-Followers.jpg" alt="can't load this time"><div>Add Followers</div> </button>
+        
+        <button onClick="deleteFollowers('<%=data.customer._id%>')"><img class="img1" src="../images/remove-followers.png" alt="can't load this time"> <div>Delete Followers</div> </button>
 
           <div>
               <p><b id='result'></b></p>

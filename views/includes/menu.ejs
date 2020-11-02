@@ -1,12 +1,9 @@
-
-
 <% if (!!data.customer) { %>
     <% if (!!data.isAccount) { %>
-        <h3>Account-user</h3>
+        <h3><small>Account-user</small></h3>
         <div class="vertical-menu">
 
-            <!--<a href="/upload/<%= data.customer._id %>" class="active">Single Media</a>-->
-<!--            <a href="/account/newsfeed">Newsfeed</a>-->
+        
             <a href="/account/blocked">Blocked Accounts</a>
             <a href="/account/update">Account Update</a>
             <a href="/account/search">Search</a>
@@ -15,17 +12,17 @@
 
 
     <% } else {%>
-    <h4>Upload Media</h4>
+    <h4><small>Upload Media</small></h4>
     <div class="vertical-menu">
 
-        <!--<a href="/upload/<%= data.customer._id %>" class="active">Single Media</a>-->
+        
         <a href="/upload/<%= data.customer._id %>">Single Media</a>
         <a href="/upload/many/<%= data.customer._id %>">Multiple Media</a>
     </div>
 <% }}
 else {
 %>
-    <h1>Account</h1>
+    <h1><small>Account</small></h1>
     <div class="vertical-menu">
         <a href="/users/login">Login</a>
         <a href="/users/signup">Register</a>

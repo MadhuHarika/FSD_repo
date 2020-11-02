@@ -3,14 +3,14 @@ function getFollowers(userId)
     alert("inside"+userId);
     fetch("/followers/"+userId, {
         method: 'GET',
-         //body: JSON.stringify({user: "pppppppp" }),
+         
         headers: {
-            'Content-type': 'application/json; charset=UTF-8' // Indicates the content
+            'Content-type': 'application/json; charset=UTF-8'
         }
     }).then(res => {
         return res.json();
     }).then(res => {
-        console.log(res);// {success: true/false, data: {}, message: ""}
+        console.log(res);
 
         if(res.success){
             varResult = document.getElementById("result");
@@ -28,58 +28,47 @@ function getFollowers(userId)
 }
 
 function getUsers() {
-    alert("inside");
-   // window.location.href = '/search';
-
+    alert("Users Info");
+   
 }
 
 function blockUser(userId,blockuserId) {
-    alert("inside");
+    
     fetch("/blockers/add-blocker", {
         method: 'POST',
-        // body: JSON.stringify({user: document.getElementById.("username").value, password: $("#password").val()}),
+        
         body: JSON.stringify({userId: userId, blockuserId: blockuserId}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8', // Indicates the content
-            //'Authorization':'jwt '+token
+    
         }
     }).then(res => {
-        console.log(res);// {success: true/false, data: {}, message: ""}
+        console.log(res);
         window.location.reload();
-        /*
-        if(res.success){
-            window.location.href = '/followers/'+userId;
-        } else {
-            alert(res.message);
-        }*/
+        
     }).catch(err => {
         alert(err);console.log(err);
     });
-   // window.location.href = '/search';
+   
 
 }
 
 
 function unblockUser(userId,blockuserId) {
     alert("inside");
-   // window.location.href = '/search';
+   
        fetch("/blockers/unblock", {
         method: 'DELETE',
-        // body: JSON.stringify({user: document.getElementById.("username").value, password: $("#password").val()}),
+   
         body: JSON.stringify({userId: userId, blockuserId: blockuserId}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8', // Indicates the content
-            //'Authorization':'jwt '+token
+   
         }
     }).then(res => {
-        console.log(res);// {success: true/false, data: {}, message: ""}
+        console.log(res);
         window.location.reload();
-        /*
-        if(res.success){
-            window.location.href = '/followers/'+userId;
-        } else {
-            alert(res.message);
-        }*/
+        
     }).catch(err => {
         alert(err);console.log(err);
     });
@@ -88,24 +77,18 @@ function unblockUser(userId,blockuserId) {
 
 function unFollow(userId,followUserId) {
 
-    alert("inside");
+    alert("Unfollowed");
 
     fetch("/followers/", {
         method: 'DELETE',
-        // body: JSON.stringify({user: document.getElementById.("username").value, password: $("#password").val()}),
-        body: JSON.stringify({userId: userId, followUserId: followUserId}),
+                body: JSON.stringify({userId: userId, followUserId: followUserId}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8', // Indicates the content
-            //'Authorization':'jwt '+token
-        }
+                }
     }).then(res => {
-        console.log(res);// {success: true/false, data: {}, message: ""}
+        console.log(res);
         window.location.reload();
-        /*if(res.success){
-            window.location.href = '/followers/'+userId;
-        } else {
-            alert(res.message);
-        }*/
+        
     }).catch(err => {
         alert(err);console.log(err);
     });
@@ -115,18 +98,17 @@ function unFollow(userId,followUserId) {
 
 function addFollowers(userId,followeruserId)
 {
-    alert("inside");
+    alert("Added followers");
 
     fetch("/followers/add-follower/", {
         method: 'POST',
-        // body: JSON.stringify({user: document.getElementById.("username").value, password: $("#password").val()}),
+        
         body: JSON.stringify({userId: userId, followeruserId: followeruserId}),
         headers: {
-            'Content-type': 'application/json; charset=UTF-8', // Indicates the content
-            //'Authorization':'jwt '+token
+            'Content-type': 'application/json; charset=UTF-8'
         }
     }).then(res => {
-        console.log(res);// {success: true/false, data: {}, message: ""}
+        console.log(res);
 
         if(res.success){
             window.location.href = '/images/';
@@ -143,18 +125,16 @@ function addFollowers(userId,followeruserId)
 
 function deleteFollowers(userId)
 {
-    alert("inside");
-
+    alert("At Delete Followers block");
+    
     fetch("/followers/"+userId, {
         method: 'DELETE',
-        // body: JSON.stringify({user: document.getElementById.("username").value, password: $("#password").val()}),
-        //body: JSON.stringify({username: "pppppppp", followerusername: "poasertpp"}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8', // Indicates the content
-            //'Authorization':'jwt '+token
+    
         }
     }).then(res => {
-        console.log(res);// {success: true/false, data: {}, message: ""}
+        console.log(res);
 
         if(res.success){
 
@@ -243,29 +223,5 @@ function addComment(userId,mediaId)
 {
     alert("inside"+userId);
     alert("inside"+mediaId);
-/*
-    fetch("/media/add-comments", {
-        method: 'DELETE',
-        // body: JSON.stringify({user: document.getElementById.("username").value, password: $("#password").val()}),
-        body: JSON.stringify({username: "pppppppp", followerusername: "poasertpp"}),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8', // Indicates the content
-            //'Authorization':'jwt '+token
-        }
-    }).then(res => {
-        console.log(res);// {success: true/false, data: {}, message: ""}
-
-        if(res.success){
-            window.location.href = '/media/'+username;
-        } else {
-            alert(res.message);
-        }
-    }).catch(err => {
-        alert(err);console.log(err);
-    });
-
-
- */
-
 
 }

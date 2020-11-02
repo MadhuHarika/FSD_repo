@@ -2,24 +2,7 @@
     <script type="text/javascript">
         function validateDetails()
         {
-            /*
-            try {
-
-
-                        let pwd = document.forms["form1"]["passwd"].value;
-                        let cnfpwd = document.forms["form1"]["confirmPassword"].value;
-                        alert("Inside");
-                        if(pwd!=cnfpwd)
-                            alert("Password and confirm Password should be same");
-
-                        } catch(err)
-                        {
-
-                            alert("Inside error"+err);
-                        }
-                        alert("Inside");
-                        */
-
+            
                 return false;
 
             }
@@ -40,7 +23,7 @@
     <div class="col-md-6">
         <br/>
         <br/>
-        <h1 class="text-center">Profile Form</h1>
+        <h1 class="text-center"><small>Edit your Account here!!!</small></h1>
 
 
         <form id="form1" name="form1" onSubmit="return false">
@@ -126,33 +109,6 @@
                             </div>
                         </td>
                     </tr>
-                    <!--<tr>
-                        <td>
-                            <div class="float-left"><label for="passwd">Password</label></div>
-                            <div class="float-right">:</div>
-
-                        </td>
-                        <td>
-                            <div class='container'>
-                            <input type="password" class="form-control" id="passwd" name="passwd" required="true" pattern="^[A-Za-z0-9#%$! -]+$" />
-                            </div>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="float-left"><label for="confirmPassword">Confirm Password</label></div>
-                            <div class="float-right">:</div>
-
-                        </td>
-                        <td>
-                            <div class='container'>
-                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required="true" pattern="^[A-Za-z0-9#%$! -]+$"/>
-                            </div>
-
-                        </td>
-                    </tr>
-                   -->
                     <tr>
                         <td>
                             <div class="float-left"><label for="profilePicture">Profile Picture</label></div>
@@ -172,9 +128,7 @@
                     <tr>
                         <td colspan="2" align="center">
                             <button type="Submit" onclick="validateDetails()" class="btn btn-primary">Submit</button>
-                            <button type="button" onclick="this.form.reset();" class="btn btn-secondary">Clear</button>
-
-                        </td>
+                                                    </td>
 
                     </tr>
 

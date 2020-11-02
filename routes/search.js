@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
-/* GET search page. */
 
 router.get('/', function(req, res, next) {
-    res.render('search', { data:{ titleView: 'Search Page'} });
+    res.render('search', { data:{ titleView: 'Search here'} });
 });
 
 module.exports = router;

@@ -3,8 +3,6 @@ var router = express.Router();
 const {Customer} = require('../models/users');
 const {Blockedusers} = require('../models/blockedusers');
 const userController = require('../controllers/users');
-/* GET search page. */
-
 
 router.get('/search', async function(req, res, next) {
 	const customers = await Customer.find({});
@@ -24,8 +22,8 @@ router.get('/blocked', async function(req, res, next) {
     for (let i=0;i<blockedUsers.length;i++)
         blockIDs.push(blockedUsers[i].blockedUserId);
 	userController.getUsers(blockIDs,function(err,cust){
-    //console.log(cust);
-    res.render('blockedaccounts', { data:{ titleView: 'Blocked Users Page',customer: req.session.user , isAuthenticated: req.session.isLoggedIn,isAccount:true,blockedUsers: blockedUsers, users:cust} });
+    
+    res.render('blockedaccounts', { data:{ titleView: 'Blocked Users',customer: req.session.user , isAuthenticated: req.session.isLoggedIn,isAccount:true,blockedUsers: blockedUsers, users:cust} });
 
 
 })
@@ -34,7 +32,7 @@ router.get('/blocked', async function(req, res, next) {
 });
 
 router.get('/update', function(req, res, next) {
-    res.render('editprofile', { data:{ titleView: 'Update Profile Page', customer: req.session.user , isAuthenticated: req.session.isLoggedIn,isAccount:true} });
+    res.render('editprofile', { data:{ titleView: 'Update Profile', customer: req.session.user , isAuthenticated: req.session.isLoggedIn,isAccount:true} });
 });
 
 router.get('/logout', function(req, res, next) {

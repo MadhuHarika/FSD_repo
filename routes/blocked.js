@@ -10,7 +10,7 @@ router.get('/:userId', async function(req, res, next) {
     console.log('Customer'+blockers);
 
     if (blockers.length==0) {
-        console.log('No blockers found');
+        console.log('No blockers found...Good!!');
         res.send({success: false,  message: "No blockers found"});
         //res.end();
 
@@ -18,14 +18,11 @@ router.get('/:userId', async function(req, res, next) {
 
     }
     else {
-        console.log('Inside get blockers');
+        console.log('Inside the blockers data');
         res.send({success: true, data: { blockers }});
-        //res.end();
-        //res.send(customer);
+            }});
 
-    }});
 
-//router.post('/add-follower',passport.authenticate('jwt', { session: false }),async function(req, res, next) {
 router.post('/add-blocker',async function(req, res, next) {
     console.log(req.body);
     console.log("inside add blocker");
@@ -37,7 +34,7 @@ router.post('/add-blocker',async function(req, res, next) {
             userId: req.body.userId,
             blockedUserId: req.body.blockuserId,
         };
-        console.log("Blocker initialized");
+        console.log("Blocker data initialized");
         Blockedusers.create(blockers, (err, item) => {
             if (err) {
 
@@ -45,8 +42,7 @@ router.post('/add-blocker',async function(req, res, next) {
                 res.end();
             }
             else {
-                // item.save();
-                res.redirect('/');
+                                res.redirect('/');
             }});
 
     }
@@ -55,17 +51,6 @@ router.post('/add-blocker',async function(req, res, next) {
 
 
 });
-/*
-router.delete('/:userId', async function(req, res, next) {
-
-    console.log(req.params.userId);
-    const result = await Blockedusers.deleteMany({userId:req.params.userId});
-    console.log(result);
-
-    res.send({success: true,  message: "record deleted"});
-    //res.send('respond with a delete resource');
-});
-*/
 
 router.delete('/unblock', async function(req, res, next) {
     console.log("Inside unblock");
@@ -75,9 +60,8 @@ router.delete('/unblock', async function(req, res, next) {
     const result = await Blockedusers.deleteOne({userId:req.body.userId, blockedUserId:req.body.blockuserId});
     console.log(result);
 
-    res.send({success: true,  message: "record deleted"});
-    //res.send('respond with a delete resource');
-});
+    res.send({success: true,  message: "record deleted successfully.."});
+    });
 
 
 module.exports = router;

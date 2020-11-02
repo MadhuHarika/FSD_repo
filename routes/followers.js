@@ -34,15 +34,12 @@ router.get('/:userId', async function(req, res, next) {
 
         })
 
-        //res.end();
-        //res.send(customer);
-
+        
 }});
 
-//router.post('/add-follower',passport.authenticate('jwt', { session: false }),async function(req, res, next) {
 router.post('/add-follower',async function(req, res, next) {
 console.log(req.body);
-console.log("inside add follower");
+console.log("inside add follower block");
 
     const customer = await Customer.find({userId: req.body.followeruserId });
     console.log('Customer'+customer);
@@ -51,7 +48,7 @@ console.log("inside add follower");
             userId: req.body.userId,
             followUserId: req.body.followeruserId,
         };
-        console.log("Follower initialized");
+        console.log("Followers data initialized");
         Followers.create(follower, (err, item) => {
             if (err) {
 
@@ -59,8 +56,7 @@ console.log("inside add follower");
                 res.end();
             }
             else {
-                // item.save();
-                res.redirect('/');
+                                res.redirect('/');
             }});
 
     }

@@ -9,41 +9,38 @@ const saltRounds = 10;
 var fs = require('fs');
 const {Customer, validate} = require('../models/users');
 
-/* GET users Details. */
+
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-/* GET users listing. */
-/*router.get('/getUser', function(req, res, next) {
-  res.send('respond with a resource');
-});
-*/
-/* User Login. */
+
+router.get('/home', function(req, res, next) {
+  res.render('home', {data:{ titleView: 'Home Page'}});
+  
+  });
+  
+
 router.get('/login', function(req, res, next) {
 res.render('login', {data:{ titleView: 'Login Page'}});
 
 });
 
-/* User Sign Up */
+
 router.get('/signup', function(req, res, next) {
   res.render('signup', {data:{ titleView: 'Sign Up Page'}});
 });
 
-/* Modify users Details. */
-//router.get('/updateUser',passport.authenticate('jwt', { session: false }), async function(req, res, next) {
 router.get('/updateUser', async function(req, res, next) {
   console.log("after authorized");
   let customer = await Customer.findById({_id:'5f8976531c9e70234003a28a'});
   console.log('Display Customer with ID'+ customer);
-  //res.send(result);
+
   res.render('editprofile', {data:{ titleView: 'Update Profile Page',customer: customer}});
 });
 
 
 
 router.post('/add-user',uploader.single('profilePicture'), async (req, res) => {
-//  const { error } = validate(req.body);
- // if (error) return res.status(400).send(error.details[0].message);
   console.log("inside post method");
   let passwd='';
   console.log(req.body.passwd);
@@ -60,7 +57,7 @@ router.post('/add-user',uploader.single('profilePicture'), async (req, res) => {
         dateofbirth: req.body.dateofBirth,
         password: passwd,
 
-        // profilepic: req.body.profilePicture,
+
         profilepic: {
           imgdata: new Buffer.from(fs.readFileSync(req.file.path), 'base64'),
           contentType: req.file.mimetype
@@ -73,12 +70,12 @@ router.post('/add-user',uploader.single('profilePicture'), async (req, res) => {
 
           console.log(err);
           res.render('index', { data:{ titleView: 'Welcome Page'}, data: { customer } });
-         // res.end();
+
         }
         else {
-          // item.save();
+
           res.render('index', { data:{ titleView: 'Welcome Page'}, data: { customer } });
-          //res.redirect('/', data: { customer}  );
+
         }});
 
 
@@ -86,7 +83,7 @@ router.post('/add-user',uploader.single('profilePicture'), async (req, res) => {
 
 });
 
-/* User Login. */
+
 router.post('/login', async function(req, res, next) {
   let loginid= req.body.loginId;
   let passwd = req.body.passwd;
@@ -101,13 +98,13 @@ router.post('/login', async function(req, res, next) {
           req.session.user = customer;
           req.session.save(err => {
               console.log(err);
-             // res.render('index', {data:{ titleView: 'Welcome Page',customer: customer, token: resstr}});
+
              res.redirect('/');
 
           });  
 
 
-          //res.render('index', {data:{ titleView: 'Welcome Page',customer: customer, token: resstr}});
+
 
         }
         else {
@@ -122,37 +119,10 @@ router.post('/login', async function(req, res, next) {
   });
 
 
-/*
-  const customer = await Customer.find({username: loginid}).and({password:passwd});
-  console.log('Customer'+customer);
-  if (customer.length==0) {
-    console.log('Inside go login');
-    res.render('login', {data:{ titleView: 'User Login Page',errormsg:'Invalid credentials'}});
-    return;
 
-  }
-  else {
-    console.log('Inside go index');
-    //console.log('Customer'+customer);
-    let resstr="";
-    resstr=require(__dirname + '/../utility/token')( customer[0] , resstr);
-
-    //localStorage.setItem("token", token);
-    //res.send(customer);
-    console.log("after token generation");
-    console.log(resstr);
-    res.render('index', {data:{ titleView: 'Welcome Page',customer: customer[0], token: resstr}});
-
-  }
-
-
- */
 });
 
 router.put('/update-user', async (req, res) => {
-//  const { error } = validate(req.body);
-  // if (error) return res.status(400).send(error.details[0].message);
-
   const customer = await Customer.findByIdAndUpdate(req.params.id,
       {
         firstname: req.body.firstName,
@@ -162,7 +132,7 @@ router.put('/update-user', async (req, res) => {
         profilepic: req.body.profilePicture,
 
       }, { new: true });
-  if (!customer) return res.status(404).send('The customer with the given ID was not found.');
+  if (!customer) return res.status(404).send('The customer with the given ID was not found. Please provide correct ID');
   res.send(customer);
   res.redirect('/');
 });
