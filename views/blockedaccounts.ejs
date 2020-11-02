@@ -1,0 +1,53 @@
+<%- include('includes/head.ejs') %>
+
+</head>
+<script src="/javascripts/common.js"></script>
+<body class="container">
+<%- include('includes/nav.ejs') %>
+<div class="row">
+    <div class="col-md-4">
+
+        <%- include('includes/menu.ejs') %>
+    </div>
+
+    <div class="col-md-6">
+
+
+        <h1>Blocked Accounts Page</h1>
+		<% if (!!data.customer) { %>
+		    <% if (!!data.blockedUsers) { %>
+
+		    <% if (!!data.users) { %>
+		        <% data.users.forEach(function(cust) { %>
+		    <div>
+		        <img src="data:image/<%=cust.profilepic.contentType%>;base64,
+		                     <%=cust.profilepic.imgdata.toString('base64')%>" width="300" height="250">
+		        <div>
+		            <p><%= cust.firstname %></p>
+		            <p><%= cust.lastname %></p>
+
+
+		            <button onClick="unblockUser('<%= data.customer._id %>','<%= cust._id %>')" >UnBlock User</button>
+
+
+
+		        </div>
+		    </div>
+		    <% })
+		    }
+		    } else {
+		    %>
+
+		    <p>No Blocked Users found</p>
+		<%}
+		    }
+		    %>
+
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
